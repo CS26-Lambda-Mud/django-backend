@@ -5,6 +5,99 @@
 # procedural generation algorithm and use print_rooms()
 # to see the world.
 
+names = [ 
+'Pokémon',
+'Bulbasaur',
+'Ivysaur',
+'Venusaur',
+'Charmander',
+'Charmeleon',
+'Charizard',
+'Squirtle',
+'Wartortle',
+'Blastoise',
+'Caterpie',
+'Metapod',
+'Butterfree',
+'Weedle',
+'Kakuna',
+'Beedrill',
+'Pidgey',
+'Pidgeotto',
+'Pidgeot',
+'Rattata',
+'Raticate',
+'Spearow',
+'Fearow',
+'Ekans',
+'Arbok',
+'Pikachu',
+'Raichu',
+'Sandshrew',
+'Sandslash',
+'Nidoran♀',
+'Nidorina',
+'Nidoqueen',
+'Nidoran♂',
+'Nidorino',
+'Nidoking',
+'Clefairy',
+'Clefable',
+'Vulpix',
+'Ninetales',
+'Jigglypuff',
+'Wigglytuff',
+'Zubat',
+'Golbat',
+'Oddish',
+'Gloom',
+'Vileplume',
+'Paras',
+'Parasect',
+'Venonat',
+'Venomoth',
+'Diglett',
+'Dugtrio',
+'Meowth',
+'Persian',
+'Psyduck',
+'Golduck',
+'Mankey',
+'Primeape',
+'Growlithe',
+'Arcanine',
+'Poliwag',
+'Poliwrath',
+'Abra',
+'Kadabra',
+'Alakazam',
+'Machop',
+'Machoke',
+'Machamp',
+'Bellsprout',
+'Weepinbell',
+'Tentacruel',
+'Slowbro',
+'Magnemite',
+'Magneton',
+'Farfetchd',
+'Doduo',
+'Dodrio',
+'Seel',
+'Dewgong',
+'Grimer',
+'Muk',
+'Shellder',
+'Cloyster',
+'Gastly',
+'Haunter',
+'Gengar',
+'Onix',
+'Drowzee',
+'Hypno',
+'Krabby',
+'Kingler']
+
 
 class Room:
     def __init__(self, id, name, description, x, y):
@@ -152,9 +245,9 @@ class World:
 
 
 w = World()
-num_rooms = 44
-width = 8
-height = 7
+num_rooms = 100
+width = 20
+height = 20
 w.generate_rooms(width, height, num_rooms)
 w.print_rooms()
 
