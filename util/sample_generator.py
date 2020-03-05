@@ -6,6 +6,8 @@
 # to see the world.
 
 
+
+
 class Room:
     def __init__(self, id, name, description, x, y):
         self.id = id
@@ -152,9 +154,9 @@ class World:
 
 
 w = World()
-num_rooms = 44
-width = 8
-height = 7
+num_rooms = 100
+width = 20
+height = 20
 w.generate_rooms(width, height, num_rooms)
 w.print_rooms()
 
