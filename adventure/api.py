@@ -68,6 +68,7 @@ def say(request):
     # IMPLEMENT
     return JsonResponse({'error':"Not yet implemented"}, safe=True, status=500)
 
+# Get room data
 @csrf_exempt
 @api_view(["GET"])
 def rooms(request):
