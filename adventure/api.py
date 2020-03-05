@@ -11,6 +11,7 @@ import json
 # instantiate pusher
 # pusher = Pusher(app_id=config('PUSHER_APP_ID'), key=config('PUSHER_KEY'), secret=config('PUSHER_SECRET'), cluster=config('PUSHER_CLUSTER'))
 
+# Start a player in a room
 @csrf_exempt
 @api_view(["GET"])
 def initialize(request):
@@ -23,6 +24,7 @@ def initialize(request):
     return JsonResponse({'uuid': uuid, 'name':player.user.username, 'title':room.title, 'description':room.description, 'players':players}, safe=True)
 
 
+# Post a movement direction
 # @csrf_exempt
 @api_view(["POST"])
 def move(request):
@@ -59,7 +61,7 @@ def move(request):
         players = room.playerNames(player_id)
         return JsonResponse({'name':player.user.username, 'title':room.title, 'description':room.description, 'players':players, 'error_msg':"You cannot move that way."}, safe=True)
 
-
+# Talk to other players in the same room
 @csrf_exempt
 @api_view(["POST"])
 def say(request):
